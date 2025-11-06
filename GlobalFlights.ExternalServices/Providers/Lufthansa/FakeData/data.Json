@@ -1,0 +1,130 @@
+{
+  "Data": [
+    {
+      "Type": "flight-destination",
+      "Origin": "BCN",
+      "Destination": "KKC",
+      "DepartureDate": "2024-04-02",
+      "ReturnDate": "2024-04-09",
+      "Price": {
+        "Currency": "EUR",
+        "Total": 345.50
+      },
+      "Links": "https://api.lufthansa.com/flight-offers?origin=BCN&destination=KKC&stops=0"
+    },
+    {
+      "Type": "flight-destination",
+      "Origin": "BCN",
+      "Destination": "KKC",
+      "DepartureDate": "2024-04-02",
+      "ReturnDate": "2024-04-08",
+      "Price": {
+        "Currency": "EUR",
+        "Total": 289.75
+      },
+      "Links": "https://api.lufthansa.com/flight-offers?origin=BCN&destination=KKC&stops=0"
+    },
+    {
+      "Type": "flight-destination",
+      "Origin": "BCN",
+      "Destination": "KKC",
+      "DepartureDate": "2024-04-02",
+      "ReturnDate": "2024-04-10",
+      "Price": {
+        "Currency": "EUR",
+        "Total": 412.00
+      },
+      "Links": "https://api.lufthansa.com/flight-offers?origin=BCN&destination=KKC&stops=0"
+    },
+    {
+      "Type": "flight-destination",
+      "Origin": "BCN",
+      "Destination": "KKC",
+      "DepartureDate": "2024-04-02",
+      "ReturnDate": "2024-04-07",
+      "Price": {
+        "Currency": "EUR",
+        "Total": 235.30
+      },
+      "Links": "https://api.lufthansa.com/flight-offers?origin=BCN&destination=KKC&stops=1"
+    },
+    {
+      "Type": "flight-destination",
+      "Origin": "BCN",
+      "Destination": "KKC",
+      "DepartureDate": "2024-04-02",
+      "ReturnDate": "2024-04-12",
+      "Price": {
+        "Currency": "EUR",
+        "Total": 198.90
+      },
+      "Links": "https://api.lufthansa.com/flight-offers?origin=BCN&destination=KKC&stops=1"
+    },
+    {
+      "Type": "flight-destination",
+      "Origin": "BCN",
+      "Destination": "KKC",
+      "DepartureDate": "2024-04-02",
+      "ReturnDate": "2024-04-06",
+      "Price": {
+        "Currency": "EUR",
+        "Total": 215.60
+      },
+      "Links": "https://api.lufthansa.com/flight-offers?origin=BCN&destination=KKC&stops=1"
+    },
+    {
+      "Type": "flight-destination",
+      "Origin": "BCN",
+      "Destination": "KKC",
+      "DepartureDate": "2024-04-02",
+      "ReturnDate": "2024-04-11",
+      "Price": {
+        "Currency": "EUR",
+        "Total": 185.15
+      },
+      "Links": "https://api.lufthansa.com/flight-offers?origin=BCN&destination=KKC&stops=2"
+    },
+    {
+      "Type": "flight-destination",
+      "Origin": "BCN",
+      "Destination": "KKC",
+      "DepartureDate": "2024-04-02",
+      "ReturnDate": "2024-04-05",
+      "Price": {
+        "Currency": "EUR",
+        "Total": 168.40
+      },
+      "Links": "https://api.lufthansa.com/flight-offers?origin=BCN&destination=KKC&stops=2"
+    },
+    {
+      "Type": "flight-destination",
+      "Origin": "BCN",
+      "Destination": "KKC",
+      "DepartureDate": "2024-04-02",
+      "ReturnDate": "2024-04-13",
+      "Price": {
+        "Currency": "EUR",
+        "Total": 155.80
+      },
+      "Links": "https://api.lufthansa.com/flight-offers?origin=BCN&destination=KKC&stops=3"
+    },
+    {
+      "Type": "flight-destination",
+      "Origin": "BCN",
+      "Destination": "KKC",
+      "DepartureDate": "2024-04-02",
+      "ReturnDate": "2024-04-14",
+      "Price": {
+        "Currency": "EUR",
+        "Total": 142.25
+      },
+      "Links": "https://api.lufthansa.com/flight-offers?origin=BCN&destination=KKC&stops=3"
+    }
+  ],
+  "Meta": {
+    "Count": 10,
+    "Links": {
+      "Self": "https://api.lufthansa.com/v2/shopping/flight-destinations?origin=BCN&departureDate=2024-04-02&currency=EUR&max=10"
+    }
+  }
+}

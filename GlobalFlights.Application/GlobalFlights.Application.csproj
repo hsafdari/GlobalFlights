@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="15.1.0" />
+    <PackageReference Include="FluentValidation" Version="12.0.0" />
+    <PackageReference Include="MediatR" Version="13.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GlobalFlights.Domain\GlobalFlights.Domain.csproj" />
+    <ProjectReference Include="..\GlobalFlights.DTOs\GlobalFlights.DTOs.csproj" />
+    <ProjectReference Include="..\GlobalFlights.ExternalServices\GlobalFlights.ExternalServices.csproj" />
+  </ItemGroup>
+
+</Project>

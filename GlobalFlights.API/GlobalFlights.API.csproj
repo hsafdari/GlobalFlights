@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="13.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.10" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.10" />
+    <PackageReference Include="Scalar.AspNetCore" Version="2.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GlobalFlights.Application\GlobalFlights.Application.csproj" />
+    <ProjectReference Include="..\GlobalFlights.DTOs\GlobalFlights.DTOs.csproj" />
+    <ProjectReference Include="..\GlobalFlights.ExternalServices\GlobalFlights.ExternalServices.csproj" />
+    <ProjectReference Include="..\GlobalFlights.Infrastructure\GlobalFlights.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
