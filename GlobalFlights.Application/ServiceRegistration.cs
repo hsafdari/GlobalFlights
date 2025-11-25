@@ -1,10 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+using Mediator;
+using GlobalFlights.Application.Behaviors;
 
 namespace GlobalFlights.Application
 {
@@ -12,8 +8,8 @@ namespace GlobalFlights.Application
     {
         public static IServiceCollection RegisterApplicationServices(this IServiceCollection services) {
 
-            services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
-
+            services.AddMediator(options => { options.ServiceLifetime = ServiceLifetime.Scoped; });
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));            
             return services;
         }
     }

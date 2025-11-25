@@ -11,18 +11,18 @@ using System.Threading.Tasks;
 
 namespace GlobalFlights.ExternalServices.Providers.TravelPort.Service
 {
-    public class TravelPortService : IApiService
+    public class TravelPortApiService : IExternalApiService
     {
         private readonly HttpClient _httpClient;
 
         private readonly IMapper _mapper;
-        public TravelPortService(HttpClient httpClient, IMapper mapper)
+        public TravelPortApiService(HttpClient httpClient, IMapper mapper)
         {
             _httpClient = httpClient;
             _mapper = mapper;
         }
 
-        public async IAsyncEnumerable<SearchFlightResponseDto> SearchRequestToAPIAsync(SearchFlightRequestDto requestDto)
+        public async IAsyncEnumerable<SearchFlightResponseDto> FetchDataAsync(SearchFlightRequestDto requestDto)
         {
             var path = Path.Combine(AppContext.BaseDirectory, "Providers", "TravelPort", "FakeData", "data.json");
             var result = File.ReadAllText(path);

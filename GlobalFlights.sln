@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.GlobalFlights.API", "T
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "globalflights.clientapp", "GlobalFlights.clientapp\globalflights.clientapp.esproj", "{784BDDFA-5F7E-8F3F-FD90-4886D386C847}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.GlobalFlights.ExternalServices", "Test.GlobalFlights.ExternalServices\Test.GlobalFlights.ExternalServices.csproj", "{337D3988-626F-4375-A7B9-BFF5C58285C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{784BDDFA-5F7E-8F3F-FD90-4886D386C847}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{784BDDFA-5F7E-8F3F-FD90-4886D386C847}.Release|Any CPU.Build.0 = Release|Any CPU
 		{784BDDFA-5F7E-8F3F-FD90-4886D386C847}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{337D3988-626F-4375-A7B9-BFF5C58285C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{337D3988-626F-4375-A7B9-BFF5C58285C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{337D3988-626F-4375-A7B9-BFF5C58285C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{337D3988-626F-4375-A7B9-BFF5C58285C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{A7E3E7A0-881D-55AC-1ED4-DFAD9B96D936} = {BCAEA6EC-4A50-48FE-8499-AFE2EE271748}
 		{1EB4DB1C-8DE8-406A-A816-4AB8537A04BC} = {4C5C307B-9D07-40D7-B160-F4D358FB730F}
 		{784BDDFA-5F7E-8F3F-FD90-4886D386C847} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{337D3988-626F-4375-A7B9-BFF5C58285C2} = {4C5C307B-9D07-40D7-B160-F4D358FB730F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8FD6E50C-8AC8-460E-9778-39DF803EE11E}

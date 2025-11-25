@@ -3,14 +3,8 @@ using GlobalFlights.API.Services;
 using GlobalFlights.Application.Feature.Flight.Query;
 using GlobalFlights.Common.Enums;
 using GlobalFlights.DTOs.Search;
-using MediatR;
-using Microsoft.AspNetCore.Http;
+using Mediator;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Linq.Expressions;
-using System.Text.Json;
-using System.Text.Json.Serialization.Metadata;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace GlobalFlights.API.Controllers
 {
@@ -24,26 +18,14 @@ namespace GlobalFlights.API.Controllers
         {
             _mediar = mediar;
             _sseService = sseService;
-        }
-        [HttpGet("search")]
-        public async Task<ActionResult> FlightSearch([FromQuery] SearchFlightRequestDto request, CancellationToken cancellation)
-        {
-            //throw new NotImplementedException();
-            //api call=> App=>ExternalServices=>App>api=>web
-            var result = await _mediar.Send(new SearchFlightRequestQuery(request), cancellation);
-            return Ok(result);
-        }
+        }       
         [HttpGet("stream")]
         public async Task FlightStreaming(CancellationToken cancellationToken = default)
         {
             try
             {
-                //_sseService.ConfigureResponse(Response);
-                // Send initial connection event
-                Response.StatusCode = 200;
-                Response.Headers.Append("Content-Type", "text/event-stream");
-                Response.Headers.Append("Cache-Control", "no-cache");
-                Response.Headers.Append("Connection", "keep-alive");
+                _sseService.ConfigureResponse(Response);
+                // Send initial connection event               
                 await _sseService.SendEventAsync(Response, new SSEEvent
                 {
                     EventType = "connection_established",
@@ -61,9 +43,7 @@ namespace GlobalFlights.API.Controllers
                                          ProviderCode: null);
                 
                 await foreach (var flightitem in _mediar.CreateStream(new SearchFlightRequestQuery(requestDto), cancellationToken))
-                {                   
-                    //var json = JsonSerializer.Serialize(flightitem);
-                    
+                {
                     await _sseService.SendEventAsync(Response, new SSEEvent
                     {
                         EventType = "flights",

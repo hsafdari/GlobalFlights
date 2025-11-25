@@ -24,8 +24,7 @@ namespace GlobalFlights.API.Services
 
                 var eventData = $"data: {jsonData}\n\n";
 
-                await response.Body.WriteAsync(Encoding.UTF8.GetBytes(eventData));
-                //await response.WriteAsync(eventData);
+                await response.Body.WriteAsync(Encoding.UTF8.GetBytes(eventData));               
                 await response.Body.FlushAsync();
 
                 _logger.LogInformation("Sent SSE event: {EventType}", sseEvent.EventType);
@@ -38,10 +37,10 @@ namespace GlobalFlights.API.Services
 
         public void ConfigureResponse(HttpResponse response)
         {
+            response.StatusCode = 200;
             response.Headers.Append("Content-Type", "text/event-stream");
             response.Headers.Append("Cache-Control", "no-cache");
-            response.Headers.Append("Connection", "keep-alive");
-            response.Headers.Append("Access-Control-Allow-Origin", "*");
+            response.Headers.Append("Connection", "keep-alive");            
         }
     }
 }

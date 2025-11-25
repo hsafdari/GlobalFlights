@@ -6,16 +6,16 @@ using System.Text.Json;
 
 namespace GlobalFlights.ExternalServices.Providers.Lufthansa.Service
 {
-    public class LufthansaService : IApiService
+    public class LufthansaApiService : IExternalApiService
     {
         private readonly HttpClient _httpClient;
         private readonly IMapper _mapper;
-        public LufthansaService(HttpClient httpClient, IMapper mapper)
+        public LufthansaApiService(HttpClient httpClient, IMapper mapper)
         {
             _httpClient = httpClient;
             _mapper = mapper;
         }
-        public async IAsyncEnumerable<SearchFlightResponseDto> SearchRequestToAPIAsync(SearchFlightRequestDto requestDto)
+        public async IAsyncEnumerable<SearchFlightResponseDto> FetchDataAsync(SearchFlightRequestDto requestDto)
         {
             var path = Path.Combine(AppContext.BaseDirectory, "Providers", "Lufthansa", "FakeData", "data.json");
             var result = File.ReadAllText(path);

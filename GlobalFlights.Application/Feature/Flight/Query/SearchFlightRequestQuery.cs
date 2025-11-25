@@ -1,4 +1,4 @@
-﻿using MediatR;
+﻿using Mediator;
 using GlobalFlights.DTOs.Search;
 
 namespace GlobalFlights.Application.Feature.Flight.Query

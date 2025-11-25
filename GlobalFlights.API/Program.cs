@@ -1,3 +1,4 @@
+using FluentValidation;
 using GlobalFlights.API.middleware;
 using GlobalFlights.API.Models;
 using GlobalFlights.API.Services;
@@ -20,6 +21,7 @@ public class Program
         builder.Services.RegisterExternalServices();
         builder.Services.RegisterApplicationServices();
         builder.Services.AddEndpointsApiExplorer();
+        builder.Services.AddValidatorsFromAssembly(typeof(Program).Assembly);
         builder.Services.ConfigureHttpJsonOptions(options =>
         {
             options.SerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;

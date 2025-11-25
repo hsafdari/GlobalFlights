@@ -3,12 +3,8 @@ using GlobalFlights.ExternalServices.Mappings;
 using GlobalFlights.ExternalServices.Providers.Amadeus.Service;
 using GlobalFlights.ExternalServices.Providers.Lufthansa.Service;
 using GlobalFlights.ExternalServices.Providers.TravelPort.Service;
+using GlobalFlights.ExternalServices.Services;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GlobalFlights.ExternalServices
 {
@@ -16,9 +12,11 @@ namespace GlobalFlights.ExternalServices
     {
         public static IServiceCollection RegisterExternalServices(this IServiceCollection services)
         {           
-            services.AddScoped<IApiService,AmadeusService>();
-            services.AddScoped<IApiService, LufthansaService>();
-            services.AddScoped<IApiService, TravelPortService>();
+            services.AddScoped<IExternalApiService,AmadeusApiService>();
+            services.AddScoped<IExternalApiService, LufthansaApiService>();
+            services.AddScoped<IExternalApiService, TravelPortApiService>();
+            services.AddScoped<IAuthentication, AuthenticationApiService>();
+
             services.AddAutoMapper(cfg => { }, typeof(MappingProfile).Assembly);
             return services;
         }

@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace GlobalFlights.ExternalServices.Interfaces
 {
-    public interface IApiService
+    public interface IExternalApiService
     {
-        IAsyncEnumerable<SearchFlightResponseDto> SearchRequestToAPIAsync(SearchFlightRequestDto requestDto);
+        IAsyncEnumerable<SearchFlightResponseDto> FetchDataAsync(SearchFlightRequestDto requestDto);
     }
 }
